@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html{
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Quicksand', sans-serif;    
+}
+
+*{
+  font-family: 'Quicksand', sans-serif;    
+}
+
+h1, h2, h3{
+  font-family: 'Consolas';
+}
+
+.hblock{
+  border-left: 6px solid #02b3e4;
+  padding: 1em;
+  color: #02b3e4;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+.bigTitle{
+    /* font-family: 'Alfa Slab One', cursive; */
+    font-family: 'Quicksand', sans-serif;
+
+}
+.heading{
+    font-family: 'Quicksand', sans-serif;
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.btn{
+  border-radius: 0%;
+}
+
+hr{
+  width: 20%;
+  padding: 2px;
+  background: #02b3e4;
+}
+
+.fa::hoover{
+  background: #02b3e4;
+  color: #02b3e4;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.ng-invalid:input{
+  border-left: 5px solid #a94442; /* red */
+}
+
+/** Check Success Icon **/
+.wrapper {
+  width: 100px;
+  margin: 4em auto 0;
+}
+
+.nav-link{
+  font-family: 'Arimo', sans-serif;
+  color: #0be;
+  font-weight: bold;
+
+}
+
+.checkmark {
+  stroke: green;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+
+.navbar .container .navbar-brand {
+  color: #373535;
+  font-size: 28px;
+  margin: 8px 0;
+}
+
+
+input{
+  border-radius: 0%;
+}
+
+input[type=text], input[type=email],input[type=password]{
+  border-radius: 0px;
+}
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+/** BACKGROUND COLOR STYLING **/
+.bg-pan-left {
+	-webkit-animation: bg-pan-left 8s both;
+	        animation: bg-pan-left 8s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation bg-pan-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+
+  /* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+   
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bigTitle{
+        font-size: 50px;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .bigTitle{
+        font-size: 70px;
+    }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .bigTitle{
+        font-size: 80px;
+    }
+ }
