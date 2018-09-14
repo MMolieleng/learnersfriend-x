@@ -1,0 +1,158 @@
+<div class="container-fluid text-light" id="topLand" style="background: #29bdd7;">
+  <div class="row">
+    <div class="col-12" style="padding-top: 10em; padding-bottom: 2em;">
+      <div class="align-middle">
+        <h1 class="text-center text-light">Tutoring</h1>
+        <p class="lead text-center">We are looking for more tutors</p>
+        <hr style="border: 2px solid #ffffff; background:#FFF;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Select a subject</h3>
+      <select (change)="filterTutors($event.target.value)" name="" id="" class="form-control border-radius-0">
+          <option value="All">All Subjects</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="English">English</option>
+        <option value="Physics">Physics</option>
+        <option value="Business Education">Business Education</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="Piano">Piano</option>
+        <option value="Web Dev">Web Dev</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row pt-4 card-columns" *ngIf="tutors != null">
+    <div class="col-md-4 mt-3" *ngFor="let tutor of filteredTutors; let i = index">
+      <div class="card text-center">
+        <!-- <div class="row pt-4">
+            <img src="holder.js/100x100?theme=dark&random=yes&text={{ getSymbol(tutor.lastname) }}" class="rounded-circle mx-auto d-block" alt="">
+        </div> -->
+        <div class="card-body">
+            <h3>{{ tutor.firstname }} {{ tutor.lastname | slice:0:1 }}.</h3>
+            <span class="d-block">{{ tutor.profileDescription }}</span>
+            
+            <span *ngFor="let subj of tutor.subjects; let j = index">
+              <strong  *ngIf="j > 0">, {{ subj.title }} </strong>
+              <strong  *ngIf="j == 0"> {{ subj.title }} </strong>
+            </span>
+            <div class="dropdown-separator"></div>
+            <span class=""><i class="fa fa-map-marker"></i> {{ tutor.location }}</span>
+            <span class="ml-3"><i class="fa fa-money"></i>  {{ tutor.fee | currency:'M' }}/mnth</span>
+            <div class="mt-3">
+              <button class="btn btn-info btn-block" (click)="subscribe($event, tutor)"  href="" data-toggle="modal" data-target="#exampleModalCenter">Book Now</button>
+            </div>
+        </div>
+        <!-- <div class="card-footer text-left">
+             <small class="text-muted">Last updated 3 mins ago</small>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<div class="container p-4">
+  <div class="row p-4">
+    <div class="col-12 p-4"></div>
+  </div>
+</div>
+  
+   
+
+
+  <!-- Registration Modal -->
+  <div class="modal slide" id="exampleModalCenter" #exampleModalCenter tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeBtn>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" *ngIf="!submitting && !submitted">
+  
+              <p class="lead text-center" *ngIf="selectedTutor != null">You will be required to pay {{selectedTutor.fee | currency:'M'}} the first day you attend your first class</p>
+              <div class="form-group">
+                <input type="text" class="form-control" 
+                  formControlName="userNames"
+                  placeholder="Name and Surname" required  minlength="8" appForbiddenName="test" pattern="^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)">
+              </div>
+  
+              <div class="form-group">
+                <input type="text" class="form-control"
+                   formControlName="userPhone" 
+                   placeholder="Phone Number" required  minlength="8" appForbiddenName="12345678" maxlength="8" pattern="(((5|6)[0-9]([0-9]{6,})))">
+              </div>
+  
+              <div class="form-group" *ngIf="selectedTutor != null">
+                  <select formControlName="userSubject" name="" id="" class="form-control" required>
+                    <option value="" disabled>--Select Subject--</option>
+                      <option [value]="currSubject.title" *ngFor="let currSubject of selectedTutor.subjects">{{ currSubject.title }}</option>
+                  </select>
+                </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control"
+                  formControlName="userMessage" placeholder="Optional Message">
+              </div>
+
+            
+              <!-- {{ selectedTutor | json }} -->
+
+              <div class="form-row text-right">
+                <button type="submit" class="btn btn-primary" [disabled]="!subscriptionForm.valid">Register</button>              
+              </div>
+            </form>
+  
+            <div class="row p-4" *ngIf="submitting">
+              <div class="col-12">
+                <h3 class="text-center">Registering...</h3>
+              </div>
+              <div class="col-12 text-center">
+                <i class="fa fa-spinner fa-spin fa-3x"></i>
+              </div>
+            </div>
+  
+            <div class="row text-center" *ngIf="submittedSuccessfully && submitted">
+                <div class="wrapper">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                    <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
+                    C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+                  </svg>
+                </div>
+                <div class="col-12 text-center p-4">
+                    <h3 class="text-center">Successfully registered</h3>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-success" (click)="closeSuccess()">Okay</button>
+                </div>
+            </div>
+  
+            <div class="row text-center" *ngIf="!submittedSuccessfully && submitted">
+                <div class="wrapper">
+                    <i class="fa fa-times fa-4x text-warning" aria-hidden="true"></i>
+                </div>
+                <div class="col-12 text-center p-4">
+                    <h3 class="text-center">Failed to registered, please try again</h3>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-warning" (click)="closeSuccess()">Okay</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  

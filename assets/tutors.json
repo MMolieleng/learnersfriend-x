@@ -1,0 +1,148 @@
+[
+    {
+        "firstname":"Teboho",
+        "lastname":"Molieleng",
+        "phone":"59694444",
+        "email":"tmolieleng@rmail.com",
+        "location":"Maseru, CBD",
+        "type":"Independet",
+        "profileDescription":"A qualified Business and Accounting teacher with 3 years of work experience",
+        "mobile":false,
+        "fee":80,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Mathematics", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Business Education", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Accounting", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"English", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}       
+            ]
+    },
+    {
+        "firstname":"Setsoto",
+        "lastname":"Boleme",
+        "phone":"59694444",
+        "email":"setsotboleme@gmail.com",
+        "profileDescription":"Computer science student at the National University of Lesotho. Designs and builds websites, web and mobile applications during spare time",
+        "location":"Khubetsona",
+        "type":"Independet",
+        "mobile":false,
+        "fee":50,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Mathematics", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}
+            ]
+    },
+    {
+        "firstname":"Neo",
+        "lastname":"Mokolojane",
+        "phone":"59694444",
+        "email":"neomccho@gmail.com",
+        "profileDescription":"NUL Physics and Geography graduate",
+        "location":"Mafeteng",
+        "type":"Independet",
+        "mobile":true,
+        "fee":100,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Geography", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Physics", "price":"100", "mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}  
+            ]
+    },
+    {
+        "firstname":"Rorisang",
+        "lastname":"Nts'asa",
+        "phone":"66303087",
+        "email":"ntsasajoel@gmail.com",
+        "profileDescription":"Passionate musician with a vision to one day see excellence in the performing arts in Lesotho",
+        "location":"Maseru",
+        "type":"Independet",
+        "mobile":false,
+        "fee":200,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Piano", "price":"200","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}      
+            ]
+    },
+    {
+        "firstname":"Setsoto",
+        "lastname":"Hlohlomi",
+        "phone":"58565709",
+        "email":"shlohlomi@rmail.com",
+        "profileDescription":"BEng Computer Systems and Networks Graduate, Microsoft Certified Solutions Associate : Windows Server 2012, Web and Java Developer",
+        "location":"Online",
+        "type":"Independet",
+        "mobile":false,
+        "fee":400,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Windows Server", "price":"600","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Website Dev", "price":"400","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"CSS", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}          
+            ]
+    },
+    {
+        "firstname":"Mohale",
+        "lastname":"Molieleng",
+        "phone":"59694888",
+        "email":"mjmolieleng@rmail.com",
+        "profileDescription":"Computer Science Graduate, Professional Software Developer, Certified Blockchain Developer",
+        "location":"Online",
+        "type":"Independet",
+        "mobile":false,
+        "fee":100,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Java", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"C++", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Android", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"iOS", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Website Dev", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}
+            ]
+    },
+    {
+        "firstname":"Tlotliso",
+        "lastname":"Mafantiri",
+        "phone":"59694888",
+        "email":"tlotlisomichaelmafantiri@rmail.com",
+        "profileDescription":"Fullstack Software developer with over 3 years of experience",
+        "location":"Online",
+        "type":"Independet",
+        "mobile":false,
+        "fee":800,
+        "pic":"",
+        "status":"active",
+        "availableTimes":"Always",
+        "levels":{"primary":false, "secondary":false, "highschool":true, "varsity":true, "adults":true},
+        "subjects":
+            [
+                {"title":"Java", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"PHP", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Javascript", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false},
+                {"title":"Website Dev", "price":"100","mon":true, "tue":true, "wed":true, "thur":true, "fri":true, "sat":true, "sun":false}
+            ]
+    }
+]

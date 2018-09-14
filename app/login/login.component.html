@@ -1,0 +1,51 @@
+<div class="container" style="padding-top: 6.5em; min-height: 70vh;">
+
+  <div class="row pt-4 pb-4">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="pt-4">Login</h1>
+      <p class="lead text-danger" *ngIf="wrongDetails">Login deatils not found</p>
+      <i class="fa fa-spinner fa-spin fa-3x" *ngIf="submitting"></i>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+    
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <div class="form-group">
+          <input type="email" class="form-control"
+           formControlName="userEmail" placeholder="Your email address"  required>
+           <span *ngIf="f.userEmail.errors &&  !f.userEmail.pristine" class="text-danger">
+            Provide valid email address
+          </span>
+        </div>
+
+        <div class="form-group">
+          <input type="password"  formControlName="userPassword" class="form-control" minlength="6" placeholder="Password" required>
+        </div>
+
+        <div class="form-row text-right p-1">
+          <button type="submit" class="btn btn-block btn-primary" [disabled]="!loginForm.valid" *ngIf="!submitting">Login</button>    
+          <!-- <i class="fa fa-spinner fa-spin fa-3x" *ngIf="submitting"></i> -->
+          <!-- <p class="text-danger text-center p-1" *ngIf="submitted && !submittedSuccessfully && errorMessage !== null">{{errorMessage}}</p> -->
+        </div>
+
+        <div class="form-row p-1">
+          <a class="btn btn-dark btn-block" routerLink="/signup">Create Account</a>
+          <a class="btn btn-danger btn-block" routerLink="/resetpassword">Reset Password</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+  <div class="row pt-4">
+    <div class="col-12 text-center pt-4">
+      <!-- <button class="btn btn-danger" (click)="login()">
+        <i class="fa fa-google fa4" aria-hidden="true"></i>
+        Google Login</button> -->
+    </div>
+  </div>
+</div>

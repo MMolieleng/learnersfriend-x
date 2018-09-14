@@ -1,0 +1,84 @@
+[
+    
+    {
+        "title":"Learn new languages with Duolingo",
+        "description":"Did you know you can learn a language anytime of the day you wanted ? With this platform you are afforded the flexibility to learn anywhere at any time. With cool features, it is not only educational but also fun. Take this free course now to find out how.",
+        "date": "Anytime",
+        "type": "Online",
+        "location":"Online",
+        "fee":0,
+        "onsale":{
+            "isSale":false,
+            "value": 0
+        },
+        "duration":"2 hrs",
+        "instructor":"Christy",
+        "email":"shlohlomi@gmail.com",
+        "language":"English",
+        "videos":[
+            {"title":"0. Introduction","url":"https://www.youtube.com/embed/hYP3w_w2Otc"},
+            {"title":"1. Signing Up","url":"https://www.youtube.com/embed/kGGMA7UXfqQ"},
+            {"title":"2. Navigating on the portal","url":"https://www.youtube.com/embed/JKttVtDsrMs"},
+            {"title":"3. Doing your first excersise","url":"https://www.youtube.com/embed/vYrEQytV6ns"},
+            {"title":"4. Using the mobile app","url":"https://www.youtube.com/embed/OpqkCQjR9Yc"}
+
+            
+        ],
+        "files":[],
+        "references":[],
+        "links":[]
+    },
+    {
+        "title":"Introduction to Gmail",
+        "description":"As emails have become a requirement for registering for most services online, this course is an introduction to using google email service(Gmail) on your smartphone where you will learn how to register, setup an account and send your first email.",
+        "date": "Anytime",
+        "type": "Online",
+        "location":"Online",
+        "fee":10,
+        "onsale":{
+            "isSale":false,
+            "value": 10
+        },
+        "duration":"2hrs",
+        "instructor":"Christy",
+        "email":"shlohlomi@gmail.com",
+        "language":"English",
+        "videos":[
+            {"title":"0. Introduction","url":"https://www.youtube.com/embed/2Q7yRXkYSxs"},
+            {"title":"1. Creating a GMail Account","url":"https://www.youtube.com/embed/UiNpikiHDTo"},
+            {"title":"2. Sign into GMail App","url":"https://www.youtube.com/embed/Q-e2O3agVA0"},
+            {"title":"3. Sending an email with GMail","url":"https://www.youtube.com/embed/H_PJ7fG5KSI"}
+        ],
+        "files":[],
+        "references":[],
+        "links":[]
+    },
+    {
+        "title":"Advanced Google Maps Features",
+        "description":"With travelling to new places and relocating happening so often, it could be difficult for you to move around. Features addressed in this course help you navigate better in unknown places, reduce possibilities of getting lost and even discover fun places",
+        "date": "Anytime",
+        "type": "Online",
+        "location":"Online",
+        "fee":20,
+        "onsale":{
+            "isSale":true,
+            "value": 20
+        },
+        "duration":"2 hrs",
+        "instructor":"Christy",
+        "email":"shlohlomi@gmail.com",
+        "language":"English",
+        "videos":[
+            {"title":"0. Introduction","url":"https://www.youtube.com/embed/_66UU9YV7EY"},
+            {"title":"1. Convenient Configurations","url":"https://www.youtube.com/embed/bIzkaXYWxyc"},
+            {"title":"2. Updating Settings","url":"https://www.youtube.com/embed/IXCpbRl8VuU"},
+            {"title":"3. Offline Maps","url":"https://www.youtube.com/embed/8mCGAdvn8SM"},
+            {"title":"4. Nearby Places","url":"https://www.youtube.com/embed/20bu0ijVB2I"}
+
+            
+        ],
+        "files":[],
+        "references":[],
+        "links":[]
+    }
+]

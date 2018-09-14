@@ -1,0 +1,106 @@
+<!-- <div class="container-fliud bg-warning text-dark position-fixed p-1 w-100" style="z-index: 10001;">
+  <div class="row">
+    <div class="col-12 text-center">Coding Lessons coming soon...</div>
+  </div>
+</div> -->
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <nav class="navbar navbar-expand-lg pt-3 fixed-top" style="height: 100px;background:transparent;padding-top: 50px;">
+  <div class="container" back>
+      <a class="navbar-brand text-dark pt-2" href="#">LearnersFriend</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon text-dark" style="color:black; border: 1px solid #333;"></span>
+    </button>
+
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Subjects<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Programming<span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-wiinc-dark">
+  <div class="container">
+      <a class="navbar-brand d-none d-sm-block text-light " routerLink=""><img src="/assets/logo.png" width="50" height="50" alt="" id="logo">LearnersFriend</a>
+      <a class="navbar-brand d-block text-light d-sm-none" routerLink=""><img src="/assets/logo.png" width="50" height="50" alt="" id="logo"></a>
+    <button class="navbar-toggler" style="border: 1px #222 solid; border-radius: 0px;" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon nav-span"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse text-light" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ml-auto">
+        <!-- <a class="nav-item nav-link py-3" href="#">Tutors <span class="sr-only">(current)</span></a> -->
+        <li class="nav-item">
+          <a class="nav-link text-light py-3" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link text-light py-3" routerLink="/tutors">Tutors</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item nav-link text-light py-3" routerLink="/courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link text-light py-3" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged()">
+          <a class="nav-item nav-link text-light py-3" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item"  *ngIf="!isLogged()">
+          <a class="nav-item nav-link text-light py-3" routerLink="/signup">Create Account</a> 
+        </li>
+        <li class="nav-item"  *ngIf="isLogged()">
+          <a class="nav-item nav-link  text-light py-3" (click)="logout()">SignOut</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+</style>
+<!-- End Of Navigation -->
+
+<router-outlet></router-outlet>
+
+
+
+<div class="container-fluid bg-dark" style="padding-bottom: 100px;">
+  <div class="row text-center" style="border-top: 2px solid orange">
+    
+      <div class="col-md-3 pt-4 mt-4 text-muted">
+      </div>
+
+      <div class="col-md-3 pt-4 mt-4 text-muted">
+        <p class="lead">Contact Us</p>
+        <i class="fa fa-mobile fa-2x mt-1"></i>
+        <p class="lead">+266 5717 7749</p>
+        <p class="lead">info.learnersfriend@gmail.com</p>
+        <p class="lead">Available on whatsapp as well</p>
+      </div>
+
+      <div class="col-md-3 pt-4 mt-4 text-muted">
+        <p class="lead">Find Us</p>
+        <i class="fa fa-map-marker fa-2x mt-1"></i>
+        <p class="lead">Ha Pita, Pela Circle</p>
+      </div>
+
+      <div class="col-md-3 pt-4 mt-4 text-muted">
+        <p class="lead">We are on Facebook</p>
+        <a href="https://www.facebook.com/learnersfriend/" class="text-muted"><i class="fa fa-facebook-square fa-2x mt-1"></i></a>
+        <p class="lead">@LearnersFriend</p>
+      </div>
+  </div>
+</div>
+
+<script>
+
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+</script>

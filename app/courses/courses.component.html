@@ -1,0 +1,38 @@
+<div class="container-fluid text-light" id="topLand" style="background: #02b3e4;">
+  <div class="row">
+    <div class="col-12" style="padding-top: 10em; padding-bottom: 2em;">
+      <div class="align-middle">
+        <h1 class="text-center text-light">Courses</h1>
+        <hr style="border: 2px solid #ffffff; background:#FFF;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-4" *ngIf="courses != null">
+
+  <div class="row pt-4" *ngFor="let course of courses; let i = index">
+  
+    <div class="dropdown-divider"></div>
+    <div class="col-md-12 mt-3">
+        <h1>{{ course.title }}</h1>
+        <p class="lead">{{ course.description }}</p>
+        <div class="col-12 m-0 p-0">
+            <span><i class="fa fa-map-marker"></i> {{ course.location }}</span>
+            <span class="ml-3"><i class="fa fa-calendar"></i> {{ course.date }}</span>
+            <span class="ml-3"><i class="fa fa-globe"></i> {{ course.language }}</span>
+            <span class="ml-3" *ngIf="course.onsale.value == course.fee"><i class="fa fa-money fa-1x"></i> Free </span>
+            <span class="ml-3"  *ngIf="course.onsale.value != course.fee"><i class="fa fa-money fa-1x"></i> {{ course.fee | currency:'M' }}</span>
+        </div>
+        <div class="col-12 pl-0 ml-0 mt-3">
+          <a href="course/{{ i }}" class="btn btn-success">Enroll Now <i class="fa fa-arrow-right"></i></a>          
+        </div> 
+        <div class="dropdown-divider"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid p-4">
+  <div class="row p-4"></div>
+</div>
